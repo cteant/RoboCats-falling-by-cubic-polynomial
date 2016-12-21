@@ -3,7 +3,7 @@ def f(n,a,b):
 	return np.power(n,3)-300*np.power(n,2)+a*n+b;
 
 def Egg(egg,floor):
-	# dynamic programming to compute the number of experiments in the worst case, given the number of egg and floor
+	# dynamic programming to compute the minmum number of experiments needed in the worst case, given the number of egg and floor
 	egg_flag = [[0 for x in range(0,floor+1)] for y in range(0,egg+1)];#table to store the results
 
 	# for the first and the zero floor, we will return 1 and 0 respectively
@@ -57,7 +57,7 @@ if __name__ == "__main__":
 	#randomly generate two integer as the solution
 	n1=np.random.randint(low=1,high=280);
 	n2=np.random.randint(low=1,high=300-n1);
-	n1=91;n2=103
+	#n1=91;n2=103
 	#n1=15;
 	#n2=70;
 
