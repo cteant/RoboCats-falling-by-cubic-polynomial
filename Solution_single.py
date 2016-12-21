@@ -75,7 +75,7 @@ if __name__ == "__main__":
 	reverse=-1;
 	if f(x,a,b)<=0:
 		len_interval=200;
-		L=egg_flag[4][len_interval];#four robocats to find n3
+		L=egg_flag[4][len_interval];#the minimum number of experiments needed when we have four robocats to find n3 in 200 floors
 		offset=100;
 		n_3,t = Search(4,len_interval,L,a,b,offset)
 		print("compute n3 = %d in %d experiments"% (n_3,t))
