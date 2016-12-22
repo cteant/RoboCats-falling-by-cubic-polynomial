@@ -30,7 +30,7 @@ def Egg(egg,floor):
 egg_flag = Egg(4,200);
 
 # algorithm to find the critical floor
-def Search(egg,floor,L,a,b,offset=0,reverse=1,time=1,x_last=0):
+def Search(egg,floor,L,a,b,offset=0,reverse=1,time=0,x_last=0):
 	#print x_last,L
 	#f_last=f(x_last+offset,a,b);
 
@@ -47,7 +47,8 @@ def Search(egg,floor,L,a,b,offset=0,reverse=1,time=1,x_last=0):
 		L=L-1;
 		x_last=x;
 		x=x+egg_flag[egg-1].index(L) if egg!=1 else x+1;
-
+	time = time+1;
+	L = L+1;
 	if L==0 or egg==1 or abs(f(x+offset,a,b))<1e-5:
 		return int(x)+offset, int(time)
 	else:
